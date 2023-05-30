@@ -1,18 +1,22 @@
-name: Daily Check-in
+name: CI Workflow
+
 on:
-  schedule:
-    - cron: '25 14 * * *'  # 在每天的UTC时间 00:00 运行，你可以根据需要进行调整
+  push:
+    branches:
+      - main
 
 jobs:
-  check_in:
-    name: Check-in
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # 在这里添加运行签到的命令或脚本
-      # 比如运行一个Python脚本的示例：
-      - name: Run Check-in
+      - name: Build project
         run: python main.py
+
+      - name: Run tests
+        run: |
+          # 在这里添加运行测试的命令或脚本
