@@ -1,7 +1,7 @@
 name: Daily Check-in
 on:
   schedule:
-    - cron: '9 14 * * *'  # 在每天的UTC时间 00:00 运行，你可以根据需要进行调整
+    - cron: '17 14 * * *'  # 在每天的UTC时间 00:00 运行，你可以根据需要进行调整
 
 jobs:
   check_in:
