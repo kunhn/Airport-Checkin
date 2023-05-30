@@ -1,7 +1,7 @@
 name: Daily Check-in
 on:
   schedule:
-    - cron: '17 14 * * *'  # 在每天的UTC时间 00:00 运行，你可以根据需要进行调整
+    - cron: '25 14 * * *'  # 在每天的UTC时间 00:00 运行，你可以根据需要进行调整
 
 jobs:
   check_in:
@@ -15,4 +15,4 @@ jobs:
       # 在这里添加运行签到的命令或脚本
       # 比如运行一个Python脚本的示例：
       - name: Run Check-in
-        run: main.py
+        run: python main.py
